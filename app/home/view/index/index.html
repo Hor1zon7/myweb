@@ -1,32 +1,126 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="{__STATIC__}/css/style.css">
-  <link rel="stylesheet" href="//at.alicdn.com/t/font_1576261_xok8zgymf7.css">
-  <title>王晨宇的主页</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{__STATIC__}/css/style.css">
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_1576261_xok8zgymf7.css">
+    <title>宇</title>
 </head>
 <body>
-  <div class="card-container">
+<div class="card-container">
     <div class="image-wrapper">
-      <img src="{__STATIC__}/images/image01.jpg" >
+        <img src="{__STATIC__}/images/image01.jpg">
     </div>
     <div class="title-wrapper">
-      <h1 class="title">王晨宇的个人空间</h1>
-      <p class="subtitle">常静可爱捏</p>
-      <hr>
-      <div class="icon-btns">
-        <ul>
-          <li><a href="https://space.bilibili.com/27583126?spm_id_from=333.1007.0.0" target="_blank"><img src="{__STATIC__}/icon/bilibili.png" title="我的哔哩哔哩主页" alt="" width="25px" height="25px"></a></li>
-          <li><i class="iconfont phs-twitter"></i></li>
-          <li><i class="iconfont phs-facebook"></i></li>
-          <li><i class="iconfont phs-Instagram"></i></li>
-          <li><i class="iconfont phs-email"></i></li>
-        </ul>
-      </div>
+        <h1 class="title">王晨宇的个人空间</h1>
+        <div class="container">
+            <a href="{:url('Index/home')}">
+                <button class="btn">
+                    <label>进入主页</label>
+                </button>
+            </a>
+        </div>
+        <hr>
+        <div class="icon-btns">
+            <ul>
+                <li><a href="https://space.bilibili.com/27583126?spm_id_from=333.1007.0.0" target="_blank"><img
+                        src="{__STATIC__}/icon/bilibili.png" title="我的哔哩哔哩主页" alt="" width="25px" height="25px"></a>
+                </li>
+                <li><i class="iconfont phs-twitter"></i></li>
+                <li><i class="iconfont phs-facebook"></i></li>
+                <li><i class="iconfont phs-Instagram"></i></li>
+                <li><i class="iconfont phs-email"></i></li>
+            </ul>
+        </div>
     </div>
-  </div>
+</div>
 </body>
 </html>
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+    }
+
+    html {
+        height: 100%;
+    }
+
+    body {
+        background-color: rgb(51, 51, 51);
+    }
+
+    .container {
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    .btn {
+        background: none;
+        border: 0;
+        outline: 0;
+        color: aquamarine;
+        font-family: 'JetBrains Mono';
+        font-size: 20px;
+        cursor: pointer;
+        border: 2px solid aquamarine;
+        width: 250px;
+        height: 50px;
+        position: relative;
+    }
+
+    .btn label {
+        position: absolute;
+        left: 0;
+        top: 0;
+        line-height: 50px;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        background-color: rgb(51, 51, 51);
+        /*background-color: mediumpurple;*/
+    }
+
+    .btn::before {
+        content: '';
+        position: absolute;
+        left: -2px;
+        top: -2px;
+        width: 0px;
+        height: 0;
+        z-index: 0;
+        background-color: brown;
+        transition: width .5s, height .5s;
+    }
+
+    .btn::after {
+        content: '';
+        position: absolute;
+        right: -2px;
+        bottom: -2px;
+        width: 0;
+        height: 0;
+        z-index: 0;
+        background-color: brown;
+        transition: width .5s, height .5s;
+
+        /* width: calc(100% + 4px);
+        height: calc(100% + 4px); */
+    }
+
+    .btn:hover {
+        color: brown;
+    }
+
+    .btn:hover::before {
+        width: calc(100% + 4px);
+        height: calc(100% + 4px);
+    }
+
+    .btn:hover::after {
+        width: calc(100% + 4px);
+        height: calc(100% + 4px);
+    }
+</style>
