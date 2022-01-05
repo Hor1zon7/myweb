@@ -10,5 +10,5 @@
 // +----------------------------------------------------------------------
 use think\facade\Route;
 
-//测试webhook12345
+//测试webhook123456
 Route::get('home','Index/home');
